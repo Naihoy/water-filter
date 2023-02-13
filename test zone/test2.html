@@ -1,0 +1,74 @@
+<!-- HTML for the product list -->
+<div id="product-list">
+    <div class="product" data-category="category-1">
+      <img src="product-image-1.jpg" alt="Product 1" />
+      <h3>Product 1</h3>
+      <p>Description for product 1.</p>
+    </div>
+    <div class="product" data-category="category-2">
+      <img src="product-image-2.jpg" alt="Product 2" />
+      <h3>Product 2</h3>
+      <p>Description for product 2.</p>
+    </div>
+    ...
+  </div>
+  
+  <!-- HTML for the product filter -->
+  <form id="product-filter">
+    <label>
+      Filter by:
+      <select>
+        <option value="all">All</option>
+        <option value="category-1">Category 1</option>
+        <option value="category-2">Category 2</option>
+        ...
+      </select>
+    </label>
+  </form>
+  
+  <!-- CSS for styling the product list and filter -->
+  <style>
+    #product-list .product {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    #product-list .product img {
+      width: 100px;
+      height: 100px;
+      margin-right: 1rem;
+    }
+    #product-filter label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    #product-filter select {
+      font-size: 1rem;
+      padding: 0.25rem;
+    }
+  </style>
+  
+  <!-- JavaScript for implementing the product filter -->
+  <script>
+    // Get references to the product list and filter form
+    const productList = document.querySelector("#product-list");
+    const filterForm = document.querySelector("#product-filter");
+  
+    // Add an event listener to the filter form
+    filterForm.addEventListener("change", event => {
+      // Get the selected filter value
+      const selectedFilter = event.target.value;
+  
+      // Loop through all of the products
+      for (const product of productList.children) {
+        // If the selected filter is "all" or the product's category matches the selected filter, show the product
+        if (selectedFilter === "all" || product.dataset.category === selectedFilter) {
+          product.style.display = "";
+        } else {
+          // Otherwise, hide the product
+          product.style.display = "none";
+        }
+      }
+    });
+  </script>
+  

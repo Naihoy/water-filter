@@ -1,0 +1,32 @@
+#filter-heading img {
+  width:13px;
+} 
+
+#fitness-checkboxes, #workout-checkboxes, #trainer-checkboxes {
+display:none;
+}
+
+p {
+font-size:14px;
+display:inline-block;
+}
+
+.close-svg {
+width:13px;
+}
+
+#display-filter-results span {
+font-size: 13px;
+}
+
+.display{
+display:none;
+}
+
+span.beginner-checkbox {
+display:none;
+}
+
+.clearall {
+display:none;
+}

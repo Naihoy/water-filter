@@ -1,0 +1,131 @@
+
+<html lang='en'>
+	<head>
+		<meta name='viewport' content='width=device-width', intial-scale:1.0 charset='UFT-8'>
+		<link rel='stylesheet' type='text/css' href='test4.css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src='test4.js' type='text/javascript'></script>
+	</head>
+	<body>
+
+		<!-- filter click arrow icon for checkbox options -->
+		<div id='filter-heading' class='sticky-nav'>
+			<h2>Filter by:
+				<span>Fitness level <img src='https://cdn.onlinewebfonts.com/svg/img_144754.svg' id="level-arrow-click"></span>
+				<span>Workout type <img src='https://cdn.onlinewebfonts.com/svg/img_144754.svg' id='workout-arrow-click'></span>
+				<span>Trainer <img src='https://cdn.onlinewebfonts.com/svg/img_144754.svg' id='trainer-arrow-click'></span>
+					<div id='fitness-checkboxes'>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='beginner' id='beginner-checkbox'>
+							<label for='beginner-checkbox'>Beginner</label>
+						</p>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='intermediate' id='intermediate-checkbox'>
+							<label for='beginner-checkbox'>Intermediate</label>
+						</p>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='advanced' id='advanced-checkbox'>
+							<label for='beginner-checkbox'>Advanced</label>
+						</p>
+					</div>
+					<div id='workout-checkboxes'>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='under30min' id='under-30-checkbox'>
+							<label for='under-30-checkbox'>Under 30 Minutes</label>
+						</p>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='dance' id='dance-checkbox'>
+							<label for='dance-checkbox'>Dance</label>
+						</p>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='lowimpact' id='low-impact-checkbox'>
+							<label for='low-impact-checkbox'>Low-Impact</label>
+						</p>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='extreme' id='extreme-checkbox'>
+							<label for='extreme-checkbox'>Extreme Results</label>
+						</p>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='cardio' id='cardio-checkbox'>
+							<label for='cardio-checkbox'>Cardio</label>
+						</p>
+					</div>
+					<div id='trainer-checkboxes'>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='shaunt' id='shaunt-checkbox'>
+							<label for='shaunt-checkbox'>Shaun T</label>
+						</p>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='tony' id='tony-checkbox'>
+							<label for='tony-checkbox'>Tony Horton</label>
+						</p>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='autumn' id='autumn-checkbox'>
+							<label for='autumn-checkbox'>Autumn Calabrese</label>
+						</p>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='chalene' id='chalene-checkbox'>
+							<label for='chalene-checkbox'>Chalene Johnson</label>
+						</p>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='leandro' id='leandro-checkbox'>
+							<label for='leandro-checkbox'>Leandro Carvalho</label>
+						</p>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='sagi' id='sagi-checkbox'>
+							<label for='sagi-checkbox'>Sagi Kalev</label>
+						</p>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='cheng' id='cheng-checkbox'>
+							<label for='cheng-checkbox'>Dr. Mark Cheng</label>
+						</p>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='joel' id='joel-checkbox'>
+							<label for='joel-checkbox'>Joel Freeman</label>
+						</p>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='jericho' id='jericho-checkbox'>
+							<label for='jericho-checkbox'>Jericho McMatthews</label>
+						</p>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='debbie' id='debbie-checkbox'>
+							<label for='debbie-checkbox'>Debbie Siebers</label>
+						</p>
+						<p class='checkbox-items'>
+							<input type='checkbox' class='checkbox' value='yoga' id='yoga-checkbox'>
+							<label for='yoga-checkbox'>Beachbody Yoga Experts</label>
+						</p>
+					</div>
+			</h2>
+		</div>
+
+		<!-- display text for corresponding checked checkboxes -->
+		<div class='sticky-nav'>
+			<div>
+				<h2 id='display-filter-results'>Filtered by:
+					<span class='display beginner'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Beginner</span>
+					<span class='display intermediate'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Intermediate</span>
+					<span class='display advanced'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Advanced</span>
+					<span class='display under30min'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Under 30 Minutes</span>
+					<span class='display dance'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Dance</span>
+					<span class='display lowimpact'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Low-Impact</span>
+					<span class='display extreme'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Extreme Results</span>
+					<span class='display cardio'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Cardio</span>
+					<span class='display shaunt'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Shaun T</span>
+					<span class='display tony'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Tony Horton</span>
+					<span class='display autumn'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Autumn Calabrese</span>
+					<span class='display chalene'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Chalene Johnson</span>
+					<span class='display leandro'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Leandro Carvalho</span>
+					<span class='display sagi'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Sagi Kalev</span>
+					<span class='display cheng'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Dr. Mark Cheng</span>
+					<span class='display joel'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Joel Freeman</span>
+					<span class='display jericho'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Jericho McMatthews</span>
+					<span class='display debbie'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Debbie Siebers</span>
+					<span class='display yoga'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg'>Beachbody Yoga Experts</span>
+					<span class='clearall'><img src='https://store-locator.allsaints.com/assets/icons/close_black.svg' class='close-svg' id='close-all'>Clear All</span>
+				</h2>
+			</div>
+		</div>
+    </body>
+</html>
+      

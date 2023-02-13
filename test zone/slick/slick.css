@@ -1,0 +1,41 @@
+body{
+    background:#ccc;
+  }
+  .main {
+    font-family:Arial;
+    width:500px;
+    display:block;
+    margin:0 auto;
+  }
+  h2 {
+      background: #FFD700;
+      color: #0000CD;
+      font-size: 36px;
+      line-height: 100px;
+      margin: 10px;
+      padding: 2%;
+      position: relative;
+      text-align: center;
+  }
+  .button-style {
+      padding: 0;
+      margin-bottom: 10px;
+      text-align: center;
+  }
+  .button-style .button-filter {
+      background: #FFD700;
+      color: #0000CD;
+      margin: 5px;
+      width:200px;
+  }
+  .button-filter {
+      background: #3498db;
+      color: #FFD700;
+      display: inline-block;
+      font-size: 16px;
+      margin: 20px auto;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      width: 50%;
+  } 
