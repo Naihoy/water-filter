@@ -1,74 +1,57 @@
-// filterSelection("all")
-// function filterSelection(c) {
-//   var x, i;
-//   x = document.getElementsByClassName("filterDiv");
-//   if (c == "all") c = "";
-//   // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-//   for (i = 0; i < x.length; i++) {
-//     w3RemoveClass(x[i], "show");
-//     if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-//   }
-// }
-
-// // Show filtered elements
-// function w3AddClass(element, name) {
-//   var i, arr1, arr2;
-//   arr1 = element.className.split(" ");
-//   arr2 = name.split(" ");
-//   for (i = 0; i < arr2.length; i++) {
-//     if (arr1.indexOf(arr2[i]) == -1) {
-//       element.className += " " + arr2[i];
+function checkSelectedOption() {
+    var selectedOption1 = $('select.filter-select1').val();
+    var selectedOption2 = $('select.filter-select2').val();
+    var selectedOption3 = $('select.filter-select3').val();
+    var selectedOption4 = $('select.filter-select4').val();
+    var selectedOption5 = $('select.filter-select5').val();
+    var selectedOption6 = $('select.filter-select6').val();
+    console.log(selectedOption1);
+    console.log(selectedOption2);
+    console.log(selectedOption3);
+    console.log(selectedOption4);
+    console.log(selectedOption5);
+    console.log(selectedOption6);
+    $(".display").hide();
+    $('.clearall').show();
+    if (selectedOption1 || selectedOption2 || selectedOption3 || selectedOption4 || selectedOption5 || selectedOption6) {
+        if ($(".display." + selectedOption1).length || $(".display." + selectedOption2).length || $(".display." + selectedOption3).length || $(".display." + selectedOption4).length || $(".display." + selectedOption5).length || $(".display." + selectedOption6).length) {
+            $(".display").hide();
+            $(".display." + selectedOption1 + ", .display." + selectedOption2 + ", .display." + selectedOption3 + ", .display." + selectedOption4 + ", .display." + selectedOption5 + ", .display." + selectedOption6).show();
+            $('.clearall').show();
+        } else {
+            $(".display").hide();
+       }
+    }
+}
+//     if ($(".display").hasClass(selectedOption)) {
+//         $(".display").hide();
+//         $(".display." + selectedOption).show();
+//         $('.clearall').show();
+//     } else {
+//         $(".display").hide();
 //     }
-//   }
 // }
 
-// // Hide elements that are not selected
-// function w3RemoveClass(element, name) {
-//   var i, arr1, arr2;
-//   arr1 = element.className.split(" ");
-//   arr2 = name.split(" ");
-//   for (i = 0; i < arr2.length; i++) {
-//     while (arr1.indexOf(arr2[i]) > -1) {
-//       arr1.splice(arr1.indexOf(arr2[i]), 1);
-//     }
-//   }
-//   element.className = arr1.join(" ");
-// }
-
-// // Add active class to the current control button (highlight it)
-// var btnContainer = document.getElementById("myBtnContainer");
-// var btns = btnContainer.getElementsByClassName("btn");
-// for (var i = 0; i < btns.length; i++) {
-//   btns[i].addEventListener("click", function() {
-//     var current = document.getElementsByClassName("active");
-//     current[0].className = current[0].className.replace(" active", "");
-//     this.className += " active";
-//   });
-// }
-
-// if checkbox is checked, show corresponding text with option to X out and delete text and uncheck checkbox
-change(function () {
-  document.getElementById("mySelect").value;
-    console.log(getElementById("mySelect").value);
-  if ($(".display").hasClass(mySelect)) {
-      if ($(this).is(":checked")) {
-          $(".display." + mySelect).show();
-          $('.clearall').show();
-      } else {
-          $(".display." + mySelect).hide();
-      }
-  }
-
-  $('#close-all').click(function() {
- // $('input[type="checkbox"]').empty();
- $('input[type=checkbox]').each(function() { this.checked = false; }); 
- $('.display.' + mySelect).hide();
- $('.clearall').hide();
- $('#fitness-checkboxes').hide();
-$('#workout-checkboxes').hide();
-$('#trainer-checkboxes').hide();
-
+$(document).ready(function () {
+    checkSelectedOption();
 });
+
+$('select.filter-select1, select.filter-select2, select.filter-select3, select.filter-select4, select.filter-select5, select.filter-select6').change(function () {
+    checkSelectedOption();
+
+
+    $('#close-all').click(function () {
+        //  $('select.filter-select').empty();
+        $('input[type=checkbox]').each(function () {
+            this.checked = false;
+        });
+        $('.display.' + selectedOption).hide();
+        $('.clearall').hide();
+        $('#fitness-checkboxes').hide();
+        $('#workout-checkboxes').hide();
+        $('#trainer-checkboxes').hide();
+
+    });
 
 
 });

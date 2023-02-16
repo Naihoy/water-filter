@@ -33,7 +33,7 @@ a {
 }
 
 .tm-color-primary {
-  color: #069;
+  color: #003f5e;
 }
 
 .tm-color-gray {
@@ -46,7 +46,8 @@ a {
 
 .tm-bg-white-transparent {
   background-color: rgba(255, 255, 255, 0.3);
-  border: 1px solid white;
+  /* border: 1px solid white; */
+  border-radius: 1rem;
 }
 
 .tm-intro {
@@ -68,7 +69,7 @@ a {
 
 .tm-section {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   height: auto;
   max-width: 1275px;
   padding: 66px 60px;
@@ -326,12 +327,12 @@ a {
   cursor: pointer;
 }
 
-.tm-gallery-item figure img {
+.tm-gallery-item img {
   position: relative;
   display: block;
   min-height: 100%;
-  max-width: 100%;
-  opacity: 0.8;
+  max-width: 60%;
+  
 }
 
 .tm-gallery-item figure figcaption {

@@ -30,7 +30,8 @@
 
 .u-repeater {
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(2, 50%);
+  align-content: center;
 }
 .imglogo {
   height: 160px;
@@ -40,10 +41,10 @@
   padding-left: 10px;
   padding-right: 10px;
   width: auto;
-  height: 100px;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .prduc-abt p {
@@ -111,3 +112,18 @@
   background-color: #666;
   color: white;
 }
+
+.display{
+  display:none;
+}
+
+.clearall {
+  display:none;
+}
+
+.flt {
+  display: flex;
+}
+
+
+
